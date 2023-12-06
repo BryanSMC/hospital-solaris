@@ -5,7 +5,12 @@ export default {
     './src/**/*.{html,js}'
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'close-menu': 'url(../assets/images/icon-close.svg)',
+        'open-menu': 'url(../assets/images/icon-open.svg)'
+      }
+    }
   },
   plugins: []
 }

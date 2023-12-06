@@ -8,25 +8,31 @@
       href="/src/assets/favicons/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="/src/css/input.css" />
     <title>Hospital Solaris</title>
   </head>
 
   <body class="bg-slate-100">
-    <header class="bg-white shadow px-6">
-      <div class="flex justify-between h-16 items-center max-w-6xl mx-auto">
-        <nav>
-          <a href="#">
-            <img src="/src/assets/images/logo.webp" alt="Logo del Sitio" class="w-8 h-8" />
+    <header class="bg-white shadow py-3 px-8">
+      <div>
+        <nav class="flex justify-between items-center max-w-6xl mx-auto">
+          <a href="">
+            <img src="/src/assets/images/logo.webp" alt="Logo Hospital Solaris" class="h-20" />
           </a>
-          <ul>
+  
+          <button class="bg-open-menu w-10 h-10 rounded focus:ring-2 focus:ring-slate-300 md:hidden" id="boton-menu">
+          </button>
+        </nav>
+      </div>
+      
+      <div id="menu-mobile" class="contenedor-menu hidden md:hidden">
+        <ul class="absolute inset-x-0 top-32 bg-white shadow-md w-[90%] p-10 mx-auto rounded-md text-center grid gap-7 font-bold text-2xl">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Sobre Nosotros</a></li>
             <li><a href="#">Contáctanos</a></li>
-          </ul>
-          <a href="#" class="boton-agendar">Agendar Cita</a>
-        </nav>
+        </ul>
       </div>
     </header>
   </body>
+  <script type="module" src="/src/js/index.js"></script>
 </html>
