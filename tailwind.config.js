@@ -8,7 +8,13 @@ export default {
     extend: {
       backgroundImage: {
         'close-menu': 'url(../assets/images/icon-close.svg)',
-        'open-menu': 'url(../assets/images/icon-open.svg)'
+        'open-menu': 'url(../assets/images/icon-open.svg)',
+        'flecha-izquierda': 'url(../assets/images/izquierda.svg)',
+        'flecha-derecha': 'url(../assets/images/derecha.svg)'
+      },
+
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
       }
     }
   },
