@@ -18,6 +18,10 @@
     "url": "https://github.com/BryanSMC/hospital-solaris/issues"
   },
   "homepage": "https://github.com/BryanSMC/hospital-solaris#readme",
+  "dependencies": {
+    "@emailjs/browser": "3.12.1",
+    "joi": "17.11.1"
+  },
   "devDependencies": {
     "autoprefixer": "10.4.16",
     "eslint": "8.55.0",
