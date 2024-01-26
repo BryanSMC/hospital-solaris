@@ -23,7 +23,7 @@
   }
 
   .flecha {
-    @apply w-12 h-12 rounded-full bg-gray-400/40 absolute transition-colors duration-300 ease-linear hover:bg-blue-200 hover:scale-105 shadow-md;
+    @apply size-12 rounded-full bg-gray-400/40 absolute transition-colors duration-300 ease-linear hover:bg-blue-200 hover:scale-105 shadow-md;
   }
 
   .form-borde {
