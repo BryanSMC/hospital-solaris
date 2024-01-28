@@ -2,6 +2,7 @@ import menuHamburguesa from './menu-hamburguesa'
 import carrusel from './carrusel'
 import personal from './personal'
 import contacto from './contacto'
+import panel from './panel'
 
 const d = document
 
@@ -11,7 +12,9 @@ const page = path.split('/').pop()
 
 d.addEventListener('DOMContentLoaded', () => {
   // Menu Hamburguesa
-  menuHamburguesa('boton-menu', 'menu-mobile', '.contenedor-menu')
+  if (page !== 'panel.html') {
+    menuHamburguesa('boton-menu', 'menu-mobile', '.contenedor-menu')
+  }
 
   if (page === 'inicio.html') {
     // Carrusel
@@ -26,4 +29,14 @@ d.addEventListener('DOMContentLoaded', () => {
     // Carrusel
     personal('login', 'register', 'loginRegister', 'botonesLoginRegister')
   }
+
+  if (page === 'panel.html') {
+    panel('buttonOpenClose', 'sidebar')
+  }
+
+  /*
+  if (page === '.html') {
+
+  }
+  */
 })
