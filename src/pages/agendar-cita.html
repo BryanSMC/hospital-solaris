@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="/src/assets/favicons/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="/src/css/input.css" />
-  <title>Agendar cita</title>
+  <title>Solicitar Cita</title>
 </head>
 
 <body class="bg-slate-100 font-poppins">
@@ -33,7 +33,7 @@
         <div id="menu-mobile" class="hidden md:hidden transition duration-1000">
 
           <ul
-            class="contenedor-menu flex flex-col gap-3 absolute inset-x-0 top-32 bg-white shadow-md w-[90%] mx-auto rounded-md text-center font-bold text-2xl py-8">
+            class="contenedor-menu flex flex-col gap-3 absolute inset-x-0 top-32 bg-white shadow-md w-[90%] mx-auto rounded-md text-center font-bold text-2xl py-8 z-40">
             <li class="menu-mb"><a class="block w-full" href="./inicio.html">Inicio</a></li>
             <li class="menu-mb"><a class="block w-full" href="./nosotros.html">Nosotros</a></li>
             <li class="menu-mb"><a class="block w-full" href="./contactenos.html">Contáctenos</a></li>
@@ -46,7 +46,7 @@
 
           <a href="./agendar-cita.html"
             class="bg-blue-600 text-center cursor-pointer hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 px-4 rounded-md mr-8 hidden min-[540px]:inline-block md:mr-0 w-36 hover:scale-105">
-            Agendar cita
+            Solicitar Cita
           </a>
 
           <button class="bg-open-menu size-10 rounded focus:ring-2 focus:ring-slate-300 md:hidden" id="boton-menu">
@@ -58,6 +58,164 @@
     </div>
   </header>
 
+  <!-- Main -->
+  <main class="max-w-6xl mx-auto my-8 py-8 bg-white">
+    <h1 class="text-2xl text-center font-bold mb-8">Solicitud de Cita Médica</h1>
+
+    <div class="bg-green-100 rounded-lg text-sm w-11/12 mx-auto mb-8">
+      <div class="rounded-t-lg border-b-1 shadow px-4 pb-2 pt-2.5">
+        <p class="flex items-center font-bold">
+          <span class="mr-2 size-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5" />
+            </svg>
+          </span>
+          Nota
+        </p>
+      </div>
+      <div class="break-words rounded-b-lg px-4 py-4">
+        Los campos con <span class="text-red-600 font-bold">*</span> son obligatorios
+      </div>
+    </div>
+
+    <section>
+      <h2 class="text-lg text-slate-100 text-center font-bold bg-blue-600 py-2 w-11/12 mx-auto">Datos de Usuario</h2>
+      <form action="#" method="post" class="flex flex-col gap-5 *:flex *:flex-col *:gap-1 my-8 w-4/5 mx-auto">
+
+        <div>
+          <label for="nombreCompleto">Nombre Completo: <span class="text-red-600 font-bold">*</span></label>
+          <input class="form-borde bg-blue-50/90 py-2 px-4" type="text" id="nombreCompleto" name="nombreCompleto"
+            required>
+        </div>
+
+        <div>
+          <label for="numeroIdentificacion">Número de Identificación: <span
+              class="text-red-600 font-bold">*</span></label>
+          <input class="form-borde bg-blue-50/90 py-2 px-4" type="text" id="numeroIdentificacion"
+            name="numeroIdentificacion" required>
+        </div>
+
+        <div>
+          <label for="numeroContacto">Número de Contacto: <span class="text-red-600 font-bold">*</span></label>
+          <input class="form-borde bg-blue-50/90 py-2 px-4" type="tel" id="numeroContacto" name="numeroContacto"
+            required>
+        </div>
+
+        <div>
+          <label for="correo">Correo Electrónico: <span class="text-red-600 font-bold">*</span></label>
+          <input class="form-borde bg-blue-50/90 py-2 px-4" type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="bg-green-100 rounded-full text-sm mx-auto">
+          <div class="px-4 pb-2 pt-2.5">
+            <p class="flex items-center">
+              Apreciado usuario, por favor verifique la información relacionada. A este correo daremos respuesta a su solicitud de cita.
+            </p>
+          </div>
+        </div>
+
+      </form>
+    </section>
+
+    <section>
+      <h2 class="text-lg text-slate-100 text-center font-bold bg-blue-600 py-2 w-11/12 mx-auto">Información de la Cita
+      </h2>
+      <form action="#" method="post" class="flex flex-col gap-5 *:flex *:flex-col *:gap-1 mt-8 w-4/5 mx-auto">
+
+        <div>
+          <label for="servicio">Servicio a Solicitar: <span class="text-red-600 font-bold">*</span></label>
+          <select class="form-borde bg-blue-50/90 py-2 px-4" id="servicio" name="servicio" required>
+            <option value="elijeOpcion">---- Elige una opcion ----</option>
+            <option value="medicinaGeneral">Medicina General</option>
+            <option value="especialistas">Citas con Especialistas</option>
+          </select>
+        </div>
+
+        <div id="opcionesCitaMedicinaGeneral" class="flex-col" style="display:none;">
+          <label for="especialidad">Especialidad: <span class="text-red-600 font-bold">*</span></label>
+          <select class="form-borde bg-blue-50/90 py-2 px-4" id="especialidad" name="especialidad">
+            <option value="pediatria">Pediatría</option>
+            <option value="medicinaInterna">Medicina Interna</option>
+            <option value="ginecologia">Ginecología</option>
+            <option value="oftalmologia">Oftalmología</option>
+            <!-- Agrega más opciones según sea necesario -->
+          </select>
+        </div>
+
+        <div id="opcionesCitasEspecialistas" class="flex-col" style="display:none;">
+          <label for="especialista">Especialista: <span class="text-red-600 font-bold">*</span></label>
+          <select class="form-borde bg-blue-50/90 py-2 px-4" id="especialista" name="especialista">
+            <option value="cardiologo">Cardiólogo</option>
+            <option value="dermatologo">Dermatólogo</option>
+            <option value="ortopedista">Ortopedista</option>
+            <option value="oncologo">Oncólogo</option>
+            <!-- Agrega más opciones según sea necesario -->
+          </select>
+        </div>
+
+        <div class="flex items-center justify-center w-full">
+          <p>Por favor, si usted tiene documentos de apoyo debe surbirlos</p>
+          <label for="dropzone-file"
+            class="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-blue-50">
+            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+              <svg class="w-8 h-8 mb-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 20 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
+              </svg>
+              <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Haga clic para subir el archivo</span>
+              </p>
+              <p class="text-xs text-gray-500">o</p>
+              <p class="text-xs text-gray-500">arrástrelo y suéltelo</p>
+            </div>
+            <input id="dropzone-file" type="file" class="hidden" />
+          </label>
+        </div>
+
+        <div>
+          <label for="mensaje">Detalles extra:</label>
+          <textarea class="form-borde bg-blue-50/90 py-2 px-4 resize-none" name="mensaje" id="mensaje" cols="30"
+            rows="6" placeholder="Ingrese detalles a tener en cuenta"></textarea>
+        </div>
+
+        <div class="text-sm text-center">
+          <p>Al enviar, aceptas nuestras <a class="text-blue-600 underline"
+              href="https://www.privacypolicies.com/live/eb0fc873-b078-4f34-8e26-0828254b0dd7">Condisiones de uso</a> y
+            nuestra <a class="text-blue-600 underline"
+              href="https://www.privacypolicies.com/live/b1034625-48b8-4a48-b01e-51db0f8e9f22">Política de
+              privacidad</a></p>
+        </div>
+
+        <button
+          class="flex justify-center gap-2 bg-blue-600 text-center hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 rounded-md hover:scale-105 shadow-md px-4 my-6 mx-auto"
+          id="enviarSolicitudCita">
+          Enviar Solicitud
+        </button>
+
+      </form>
+    </section>
+
+    <script>
+      // Agrega script para mostrar/ocultar opciones de cita según el servicio seleccionado
+      document.getElementById('servicio').addEventListener('change', function () {
+        var opcionesCitaMedicinaGeneral = document.getElementById('opcionesCitaMedicinaGeneral')
+        var opcionesCitasEspecialistas = document.getElementById('opcionesCitasEspecialistas')
+
+        if (this.value === 'medicinaGeneral') {
+          opcionesCitaMedicinaGeneral.style.display = 'flex'
+          opcionesCitasEspecialistas.style.display = 'none'
+        } else if (this.value === 'especialistas') {
+          opcionesCitaMedicinaGeneral.style.display = 'none'
+          opcionesCitasEspecialistas.style.display = 'flex'
+        } else {
+          opcionesCitaMedicinaGeneral.style.display = 'none'
+          opcionesCitasEspecialistas.style.display = 'none'
+        }
+      });
+    </script>
+  </main>
   <!-- Footer -->
   <footer class="bg-white shadow border-2 text-center lg:text-left">
 
