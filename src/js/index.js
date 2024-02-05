@@ -3,6 +3,7 @@ import carrusel from './carrusel'
 import personal from './personal'
 import contacto from './contacto'
 import panel from './panel'
+import agendarCita from './agendar-cita'
 
 const d = document
 
@@ -16,24 +17,31 @@ d.addEventListener('DOMContentLoaded', () => {
     menuHamburguesa('boton-menu', 'menu-mobile', '.contenedor-menu')
   }
 
+  // Carrusel
   if (page === 'inicio.html') {
-    // Carrusel
     carrusel('carrusel', '.foto-carrusel', 'retroceder-carrusel', 'seguir-carrusel')
   }
 
+  // Contactenos
   if (page === 'contactenos.html') {
     contacto('contactoForm', 'nombre', 'correo', 'mensaje', 'modalError', 'contactoModalError', 'mensajeError', 'modal', 'contactoModal')
   }
 
+  // Personal
   if (page === 'personal.html') {
     // Carrusel
     personal('login', 'register', 'loginRegister', 'botonesLoginRegister')
   }
 
+  // Panel
   if (page === 'panel.html') {
     panel('buttonOpenClose', 'sidebar')
   }
 
+  // Agendar Cita
+  if (page === 'agendar-cita.html') {
+    agendarCita('formAgendar', 'nombreCompleto', 'numeroIdentificacion', 'numeroContacto', 'correo', 'servicio', 'especialidad', 'especialista', 'opcionesCitaMedicinaGeneral', 'opcionesCitasEspecialistas', 'mensaje', 'enviarSolicitudCita', 'modal', 'citaModal', 'modalError', 'citaModalError', 'mensajeError')
+  }
   /*
   if (page === '.html') {
 
