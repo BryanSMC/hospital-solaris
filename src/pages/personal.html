@@ -91,9 +91,53 @@
     </section>
 
     <section>
-      <div id="loginRegister">
+      <div class="max-w-6xl mx-auto" id="loginRegister">
       </div>
     </section>
+
+    <!-- Modal -->
+    <div id="modal"
+      class="transition-all duration-500 fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-neutral-600/50 hidden">
+      <div class="flex justify-center h-full w-full">
+        <div class="flex items-center sm:w-1/2 lg:max-w-lg">
+          <div class="bg-white rounded w-full">
+            <div class="font-bold text-xl border-b-2 p-4">Estado de envío</div>
+            <p class="my-8 mx-4 p-4 bg-green-400/20 border-l-8 border-solid border-green-600">El envío del mensaje fue
+              exitoso</p>
+            <div class="flex justify-end">
+              <button
+                class="flex justify-center gap-2 bg-blue-600 text-center hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 px-4 rounded-md w-32 hover:scale-105 mx-4 mb-4"
+                id="iniciaModal" type="submit">
+                Aceptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Error -->
+    <div id="modalError"
+      class="transition-all duration-500 fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none bg-neutral-600/50 hidden">
+      <div class="flex justify-center h-full w-full">
+        <div class="flex items-center sm:w-1/2 lg:max-w-lg">
+          <div class="bg-white rounded w-full">
+            <div class="font-bold text-xl border-b-2 p-4 text-red-600">Error</div>
+            <p class="my-8 mx-4 p-4 bg-slate-400/20 text-red-600 border-l-8 border-solid border-red-600"
+              id="mensajeError">
+            </p>
+            <div class="flex justify-end">
+              <button
+                class="flex justify-center gap-2 bg-blue-600 text-center hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 px-4 rounded-md w-32 hover:scale-105 mx-4 mb-4"
+                id="iniciaModalError" type="submit">
+                Aceptar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->

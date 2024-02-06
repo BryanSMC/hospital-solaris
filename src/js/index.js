@@ -29,8 +29,7 @@ d.addEventListener('DOMContentLoaded', () => {
 
   // Personal
   if (page === 'personal.html') {
-    // Carrusel
-    personal('login', 'register', 'loginRegister', 'botonesLoginRegister')
+    personal('login', 'register', 'loginRegister', 'botonesLoginRegister', 'formInicio', 'iniciaCorreo', 'iniciaContraseña', 'modalError', 'mensajeError', 'iniciaModalError', 'modal', 'iniciaModal', 'formRegistro', 'registroNombre', 'registroCorreo', 'registroCodigo', 'registroContraseña', 'registroConfirmarContraseña')
   }
 
   // Panel

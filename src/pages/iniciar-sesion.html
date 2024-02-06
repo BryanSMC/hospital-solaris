@@ -1,32 +1,26 @@
-<main class="max-w-6xl mx-auto">
-  <h2 class="text-center font-bold text-4xl my-10">Iniciar Sesión</h2>
-  <section
-    class="flex justify-center bg-white p-12 sm:w-9/12 md:w-8/12 lg:w-1/2 w-11/12 mx-auto rounded-md shadow mb-20">
-    <form action="" autocomplete="off" class="flex flex-col gap-7 w-11/12" id="contactoForm">
+<h2 class="text-center font-bold text-4xl my-10">Iniciar Sesión</h2>
+<section class="flex justify-center bg-white p-12 sm:w-9/12 md:w-8/12 lg:w-1/2 w-11/12 mx-auto rounded-md shadow mb-20">
+  <form autocomplete="off" id="formInicio" class="flex flex-col gap-7 w-11/12">
 
-      <div class="flex flex-col">
+    <div class="flex flex-col">
+      <label for="correo">Correo</label>
+      <input class="form-borde bg-blue-50/90 py-2 px-4" type="email" name="correo" id="iniciaCorreo"
+        placeholder="ejemplo@correo.com">
+    </div>
 
-        <label for="correo">Correo</label>
-        <input class="form-borde bg-blue-50/90 py-2 px-4" type="email" name="correo" id="iniciaCorreo"
-          placeholder="ejemplo@correo.com">
-
-      </div>
-      <div class="flex flex-col">
-
-        <label for="contraseña">Contraseña</label>
-        <input class="form-borde bg-blue-50/90 py-2 px-4" type="password" name="contraseña" id="iniciaContraseña"
-          placeholder="Contraseña">
-
-      </div>
-      <button
-        class="flex justify-center gap-2 bg-blue-600 text-center hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 px-4 rounded-md w-auto hover:scale-105 mt-4 mx-auto"
-        type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-        </svg>Iniciar Sesión
-      </button>
-    </form>
-  </section>
-</main>
+    <div class="flex flex-col">
+      <label for="contraseña">Contraseña</label>
+      <input class="form-borde bg-blue-50/90 py-2 px-4" type="password" name="contraseña" id="iniciaContraseña"
+        placeholder="Contraseña">
+    </div>
+    <button
+      class="flex justify-center gap-2 bg-blue-600 text-center hover:bg-blue-500 active:bg-blue-600 transition duration-400 text-white font-bold py-2 px-4 rounded-md w-auto hover:scale-105 mt-4 mx-auto"
+      type="submit">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+      </svg>Iniciar Sesión
+    </button>
+  </form>
+</section>
