@@ -91,7 +91,7 @@ export default function agendarCita (formAgendar, nombreCompleto, dni, numeroCon
         $correo.value = ''
         $mensaje.value = ''
       } catch (error) {
-        console.log(`Error al enviar el formulario: ${error}`)
+        console.error(`Error al enviar el formulario: ${error}`)
       }
     }
   })

@@ -79,7 +79,7 @@ export default function contacto (contactoForm, nombre, correo, mensaje, modalEr
         $correo.value = ''
         $mensaje.value = ''
       } catch (error) {
-        console.log(`Error al enviar el formulario: ${error}`)
+        console.error(`Error al enviar el formulario: ${error}`)
       }
     }
   })
